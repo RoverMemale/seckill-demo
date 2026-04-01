@@ -1,0 +1,27 @@
+# Compiled class file
+*.class
+target/
+*.jar
+*.war
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Application sensitive config
+application-local.yml
+application-dev.yml
+
+# 其他
+*.tmp
+*.swp

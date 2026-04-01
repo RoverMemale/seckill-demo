@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秒杀系统 Demo</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <!-- 登录面板（唯一入口） -->
+    <div id="loginPanel" class="panel">
+        <h2>🔐 用户登录</h2>
+        <div class="form-group">
+            <input type="text" id="nickname" placeholder="昵称" value="test">
+            <input type="password" id="password" placeholder="密码" value="123456">
+            <button onclick="login()">登录</button>
+            <button class="register-btn" onclick="showRegisterModal()">注册</button>
+        </div>
+    </div>
+
+    <!-- 秒杀面板（登录后显示） -->
+    <div id="seckillPanel" class="panel" style="display: none;">
+        <div class="user-info">
+            👤 当前用户：<span id="currentUser">-</span>
+            <button class="logout-btn" onclick="logout()">退出</button>
+        </div>
+        <h2>⚡ 秒杀商品</h2>
+        <div id="goodsList" class="goods-list">
+            <!-- 商品卡片动态加载 -->
+        </div>
+    </div>
+
+    <!-- 提示消息 -->
+    <div id="message" class="message"></div>
+</div>
+
+<!-- 注册模态框 -->
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeRegisterModal()">&times;</span>
+        <h2>📝 注册新用户</h2>
+        <div class="form-group">
+            <input type="text" id="regNickname" placeholder="昵称">
+            <input type="password" id="regPassword" placeholder="密码">
+            <input type="password" id="regConfirmPassword" placeholder="确认密码">
+            <button onclick="register()">注册</button>
+        </div>
+    </div>
+</div>
+
+<script src="/js/seckill.js"></script>
+</body>
+</html>
