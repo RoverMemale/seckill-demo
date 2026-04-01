@@ -35,13 +35,23 @@
 ## 项目结构
 
 src/main/java/com/seckill/
+
 ├── config/ # 配置类（Redis、RabbitMQ、WebMvc）
+
 ├── controller/ # 控制器
+
 ├── service/ # 业务逻辑
+
 ├── mapper/ # MyBatis-Plus Mapper
+
 ├── entity/ # 实体类
+
 ├── dto/ # 数据传输对象
+
 ├── mq/ # 消息队列消息体及消费者
+
 ├── interceptor/ # 拦截器
+
 ├── util/ # 工具类
+
 └── SeckillApplication.java
